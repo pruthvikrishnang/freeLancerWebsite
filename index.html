@@ -1,0 +1,185 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Freelancer-Client Matchmaking</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header id="site-header">
+    <h1 style="margin:5px; color: aliceblue;">Freelancer-Client Matchmaking</h1>
+    <nav id="main-nav">
+      <ul class="nav-list">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#showcase">Profiles</a></li>
+        <li><a href="#howitworks">How it works</a></li>
+        <li><a href="#contact">Post</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="home" class="hero">
+      <article class="intro">
+        <h2>Connect students & professionals with local businesses</h2>
+        <p>
+          Where talent meets opportunity and ideas turn into impactful work.
+        </p>
+        <p class="cta">
+          <a href="#showcase" class="btn">Browse Profiles</a>
+          <a href="#contact" class="btn">Post a Project</a>
+        </p>
+      </article>
+    </section>
+
+    <section id="showcase" class="section-block">
+      <h2>Featured Profiles</h2>
+      <div class = "table-wrapper">
+      <div class="table-viewport">
+      <table class="profiles">
+        <caption>Local freelancers & students</caption>
+        <tr>
+          <th>Name</th><th>Skill</th><th>Location</th><th>Minimum Charge </th>
+        </tr>
+        <tr>
+          <td>Pruthvi Krishna N G</td><td>Graphic Design</td><td>Bengaluru</td><td>₹800/hr</td>
+        </tr>
+        <tr>
+          <td>R G Ravitej</td><td>Web Dev (HTML/CSS)</td><td>Mangalore</td><td>₹900/hr</td>
+        </tr>
+        <tr>
+          <td>Praful</td><td>Content Writing</td><td>Hubli</td><td>₹600/hr</td>
+        </tr>
+        <tr>
+          <td>John</td><td>Software Engineer</td><td>Remote</td><td>₹700/hr</td>
+        </tr>
+        <tr>
+          <td>Kiran</td><td>Full Stack-developer</td><td>Hyderabad</td><td>₹750/hr</td>
+        </tr>
+      </table>
+      </div>
+      </div>
+
+      <article class="profile-cards">
+        <div class="card">
+          <img style="border-radius: 0" src="pruthvi.jpg" alt="Profile 1" />
+          <h3>Pruthvi Krishna N G</h3>
+          <p>Graphic designer | Vibe-Coder | Portfolio: sample designs</p>
+          <p><a href="https://www.linkedin.com/in/pruthvikrishnang/" target="_blank" class="small-link">Contact Pruthvi</a></p>
+        </div>
+
+        <div class="card">
+          <img style="border-radius: 0"  src="ravi.jpg" alt="Profile 2" />
+          <h3>R G Ravitej </h3>
+          <p>Front-end developer | HTML & CSS | Backend developer</p>
+          <p><a href="https://www.linkedin.com/in/ravi-tej-6a62bb36b/" target="_blank" class="small-link">Contact Ravitej</a></p>
+        </div>
+
+        <div class="card">
+          <img style="border-radius: 0" src="WhatsApp Image 2025-12-12 at 12.28.40_99e0ac7b.jpg" alt="Profile 3" />
+          <h3>Praful</h3>
+          <p>Content writer | Blog & social copy | Full stack developer</p>
+          <p><a href="https://www.linkedin.com/in/praful-maganurmath-3584a1383/" target="_blank" class="small-link">Contact Praful</a></p>
+        </div>
+        <div class  = "card">
+          <img style="border-radius: 0" src="john.jpg" alt="Profile 4" />
+          <h3>John Sokpo</h3>
+          <p>Software engineer | Python, Java | Open to remote work</p>
+          <p><a href="https://www.linkedin.com/in/john-sokpo-4372199a/" target="_blank" class="small-link">Contact John</a></p>
+        </div>
+        <div class="card">
+          <img style="border-radius: 0" src="kiran.jpg" alt="Profile 5" />
+          <h3>Kiran</h3>
+          <p>Full stack developer | MERN stack | Python developer</p>
+          <p><a href="https://www.linkedin.com/in/kiran-shankar-bhat-r-1a7b06171/" target="_blank" class="small-link">Contact Kiran</a></p>
+        </div>
+      </article>
+    </section>
+
+    <section id="howitworks" class="section-block">
+      <h2>How it works</h2>
+
+      <article>
+        <h3>For freelancers / students</h3>
+        <p>Create a short profile, list skills, upload a sample and set hourly rate.</p>
+      </article>
+
+      <article>
+        <h3>For local businesses</h3>
+        <p>View profiles filtered by skill and location, and contact directly.</p>
+      </article>
+    </section>
+
+    <section id="contact" class="section-block">
+      <h1>Post a Project</h1>
+    <form id="projectform" action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data" onsubmit="validateForm(event)">
+      <input type="hidden" name="access_key" value="ddf5ccb1-69a4-421e-9e51-950af89861d8">
+        <label for="name"><big>Name:</big></label>
+        <input type="text" id="name" name="name"><br><br>
+        <label for="email"><big>Email:</big></label>
+        <input type="email" id="email" name="email" ><br><br>
+        <label for="project"><big>List your skills here : </big></label>
+        <textarea id="project" name="project" rows="4" cols="40" ></textarea><br><br>
+        <label for="linkedin"><big>Enter your LinkedIn profile URL:</big></label>
+<input type="url" id="linkedin" name="linkedin" style="width: 350px; padding: 6px;">
+<br><br>
+
+        <label for="city"><big>Select Your City:</big></label>
+        <select id="city" name="city">
+        <option value="">--Select City--</option>
+        <option>Bengaluru</option>
+        <option>Chennai</option>
+        <option>Hyderabad</option>
+        <option>Mumbai</option>
+        <option>Delhi</option>
+        <option>Kolkata</option>
+        <option>Pune</option>
+        <option>Ahmedabad</option>
+        <option>Remote</option>
+        </select><br><br>
+        <label for="rate"><big>Minimum Charge (per hour)</big></label>
+        <input type="text" id="rate" name="rate"><br><br>
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </form>
+
+    <h3 id="message" style = "color: red;"></h3>
+
+    <script>
+        function validateForm(event) {
+          event.preventDefault();
+            let name = document.getElementById("name").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let details = document.getElementById("project").value.trim();
+            let message = document.getElementById("message");
+            if(name === "" || email === "" || details === "") {
+                message.innerText = "All fields are required!";
+                return false;
+            }
+            let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+            if(!emailPattern.test(email)) {
+                message.innerText = "Please enter a valid email address.";
+                return false;
+            }
+            message.style.color = "green";
+            message.innerText = "We'll update your profile soon!";
+            setTimeout(() => {
+                event.target.submit();
+            }, 3000);
+        }
+  window.onload = function () {
+    const form = document.getElementById("projectform");
+    if (form) {
+      form.reset();
+    }
+  };
+</script>
+    </section>
+  </main>
+  <footer id="site-footer">
+    <p>© Freelancer-Client Matchmaking — Student & Professional Platform</p>
+  </footer>
+</body>
+</html>
